@@ -9,11 +9,15 @@ body {
   line-height: 1.4;
   /* 줄높이: 1.4배 사용하는 글꼴에 따라 달라질수 있다 */
   font-family: 'Nanum Gothic', sans-serif;
-  /* 폰트그룹: 나눔고딕, 없을때는 산세리프체 */
+  /* 글꼴지정: 나눔고딕, 없을때는 산세리프체 */
 }
 img {
   display: block;
   /* 화면표시: 블록요소 */
+}
+a {
+  text-decoration: none;
+  /* 글자선사용: 사용하지 않음 */
 }
 
 
@@ -24,13 +28,13 @@ header {
 header .inner {
   width: 1100px;
   /* 너비: 1100px */
-  width: 120px;
+  height: 120px;
   /* 높이: 120px; */
   margin: 0 auto;
   /* 외부여백: 위아래0 좌우auto 가운데 정렬 */
   background-color: yellow;
   position: relative;
-  /* 위치:  */
+  /* 위치: absolute의 기준*/
 }
 header .logo {
   height: 75px;
@@ -42,5 +46,62 @@ header .logo {
   left: 0;
   /* 정렬을 위한 기준점 */
   margin: auto;
-  /* 가운제 배치를 위해 필요한 속성: 위치, 높이/너비, 마진 */
+  /* 가운데 배치를 위해 필요한 속성: 위치, 높이/너비, 마진 */
+  display: none;
+}
+header .sub-menu {
+
+}
+header .sub-menu ul.menu {
+  font-family: Arial, sans-serif;
+  /* 글꼴지정 */
+  display: flex;
+}
+header .sub-menu ul.menu li {
+  position: relative;
+}
+header .sub-menu ul.menu li::before {
+  /* ::before 요소 내부의 앞에, 여기서 부모요소는 li */
+  content: "";
+  /* 가상 요소 선택자를 사용할때 필수 */
+  width: 1px;
+  /* 너비: 1px */
+  height: 12px;
+  /* 높이: 12px */
+  background-color: #e5e5e5;
+  /* 배경색상: #e5e5e5 */
+  position: absolute;
+  /* position을 사용하면 display는 자동으로 block로 바뀐다 */
+  top: 0;
+  bottom: 0;
+  /* 기준점 지정 */
+  margin: auto;
+  /* 가운데 정렬 */
+}
+header .sub-menu ul.menu li:first-child::before {
+  display: none;
+  /* 화면표시: 화면에 표시하지 않음 */
+}
+header .sub-menu ul.menu li a {
+  font-size: 12px;
+  /* 폰트크기: 12px */
+  padding: 11px 16px;
+  /* 내부여백: 위아래11px 좌우16px */
+  display: block;
+  /* 화면표시: 블록요소 */
+  color: #656565;
+  /* 폰트색상: #656565 */
+}
+header .sub-menu ul.menu li a:hover {
+  color: #000;
+  /* 폰트색상: #000 */
+}
+header .sub-menu .search {
+  
+}
+header .sub-menu .search input {
+
+}
+header .sub-menu .search .material-icons {
+
 }
