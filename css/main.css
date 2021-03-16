@@ -23,7 +23,10 @@ a {
 
 /* HEADER */
 header {
-  background-color: royalblue;
+  background-color: #f6f5f0;
+  /* 배경색상: #f6f6f6 */
+  border-bottom: 1px solid #c8c8c8;
+  /* 테두리선-아래: 두께1px 실선 색상#c8c8c8 */
 }
 header .inner {
   width: 1100px;
@@ -32,7 +35,6 @@ header .inner {
   /* 높이: 120px; */
   margin: 0 auto;
   /* 외부여백: 위아래0 좌우auto 가운데 정렬 */
-  background-color: yellow;
   position: relative;
   /* 위치: absolute의 기준*/
 }
@@ -47,18 +49,26 @@ header .logo {
   /* 정렬을 위한 기준점 */
   margin: auto;
   /* 가운데 배치를 위해 필요한 속성: 위치, 높이/너비, 마진 */
-  display: none;
 }
 header .sub-menu {
-
+  position: absolute;
+  /* 위치: 부모요소기준 */
+  top: 10px;
+  /* 위에서10px */
+  right: 0;
+  /* 오른쪽 기준점 */
+  display: flex;
+  /* 화면표시: flex 자식요소 수평정렬 */
 }
 header .sub-menu ul.menu {
   font-family: Arial, sans-serif;
   /* 글꼴지정 */
   display: flex;
+    /* 화면표시: flex 자식요소 수평정렬 */
 }
 header .sub-menu ul.menu li {
   position: relative;
+  /* 위치: 자식요소들의 기준점 만들기 */
 }
 header .sub-menu ul.menu li::before {
   /* ::before 요소 내부의 앞에, 여기서 부모요소는 li */
@@ -97,11 +107,56 @@ header .sub-menu ul.menu li a:hover {
   /* 폰트색상: #000 */
 }
 header .sub-menu .search {
-  
+  height: 34px;
+  /* 높이: 34px */
+  position: relative;
+  /* 위치: 지삭요소중 absolute를 가진것의 기준이 되게 */
 }
 header .sub-menu .search input {
-
+  width: 36px;
+  /* 너비: 36px */
+  height: 34px;
+  /* 높이: 34px */
+  padding: 4px 10px;
+  /* 내부여백: 위아래4px 좌우10px */
+  border: 1px solid #ccc;
+  /* 테두리: 두께1px 실선 색상#ccc */
+  box-sizing: border-box;
+  /* 요소사이즈: 테두리선까지 포함해서 */
+  border-radius: 5px;
+  /* 모서리: 5px둥글게 */
+  outline: none;
+  /* input의 테두리: 사용하지 않음 */
+  background-color: #fff;
+  /* 배경색상: #fff */
+  color: #777;
+  /* 폰트색상: #777 */
+  font-size: 12px;
+  /* 폰트크기: 12px */
+  transition: width .4s;
+  /* 전환효과: 너비만 .4초 */
+}
+header .sub-menu .search input:focus {
+  width: 190px;
+  /* 너비: 190px */
+  border-color: #669900;
+  /* 테두리색상: #669900 */
 }
 header .sub-menu .search .material-icons {
-
+  height: 24px;
+  /* 높이: 24px */
+  position: absolute;
+  /* 위치: 부모요소를 기준으로 */
+  top: 0;
+  bottom: 0;
+  right: 5px;
+  /* 기준점 */
+  margin: auto;
+  /* 외부여백: 가운데정렬 */
+  transition: .4s;
+  /* 전환효과: .4초 */
+}
+header .sub-menu .search.focused .material-icons {
+  opacity: 0;
+  /* 투명도: 0 */
 }
