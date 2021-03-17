@@ -165,30 +165,38 @@ header .sub-menu .search.focused .material-icons {
 }
 header .main-menu {
   position: absolute;
+  /* 위치: 부모요소를 기준으로 */
   bottom: 0;
   right: 0;
   z-index: 1;
   /* 요소쌓임순서 */
   display: flex;
+  /* 화면표시: flex - 자식요소 수평 정렬 */
 }
 header .main-menu .item {
 
 }
 header .main-menu .item .item__name {
   padding: 10px 20px 34px 20px;
+  /* 내부여백: 위10px 우20px 아래34px 좌20px */
   font-family: Arial, sans-serif;
   /* 글꼴지정: ,없으면 고딕체계열 */
   font-size: 13px;
+  /* 폰트크기: 13px */
 }
 header .main-menu .item:hover .item__name {
   background-color: #2c2a29;
+  /* 배경색상: #2c2a29 */
   color: #669900;
+  /* 폰트색상: #669900 */
   border-radius: 6px 6px 0 0;
   /* 모서리: 좌상단6px 우상단6px 우하단0 좌하단0 */
 }
 header .main-menu .item .item__contents {
   width: 100%;
+  /* 너비: 부모요소의 100% */
   position: fixed;
+  /* 위치: 고정값(부모요소기준) */
   left: 0;
   display: none;
   /* top이나 bottom 속성을 사용하지 않아 수직 위치 값이 없다면,
@@ -198,12 +206,60 @@ header .main-menu .item .item__contents {
 }
 header .main-menu .item:hover .item__contents {
   display: block;
+  /* 화면표시: 블록요소 */
 }
 header .main-menu .item .item__contents .contents__menu {
-  background-color: red;
-  height: 200px;
+  background-color: #2c2a29;
+}
+header .main-menu .item .item__contents .contents__menu > ul {
+/* depth가 깊어지면 하위요소 선택자보다 자식요소 선택지가 좋다 */
+  display: flex;
+  /* 화면표시: flex 자식요소가 수평정렬 */
+  padding: 20px 0;
+}
+header .main-menu .item .item__contents .contents__menu > ul > li {
+/* depth가 깊어지면 하위요소 선택자보다 자식요소 선택지가 좋다 */
+  width: 220px;
+  /* 너비: 220px */
+}
+header .main-menu .item .item__contents .contents__menu > ul > li h4 {
+  padding: 3px 0 12px 0;
+  /* 내부여백: 위3px 우0 아래12px 좌0 */
+  font-size: 14px;
+  /* 폰트크기: 14px */
+  color: #fff;
+  /* 폰트색상: #fff */
+}
+header .main-menu .item .item__contents .contents__menu > ul > li ul li {
+  padding: 5px 0;
+  /* 내부여백: 위아래5px 좌우0 */
+  font-size: 12px;
+  /* 폰트크기: 12px */
+  color: #999;
+  /* 폰트색상: #999 */
+  cursor: pointer;
+  /* 마우스모양: 포인터 */
+}
+header .main-menu .item .item__contents .contents__menu > ul > li ul li:hover {
+  color: #669900;
 }
 header .main-menu .item .item__contents .contents__texture {
-  background-color: orange;
-  height: 100px;
+  font-size: 12px;
+  /* 폰트크기: 12px */
+  padding: 26px 0;
+  /* 내부여백: 위아래26px 좌우0 */
+  background-image: url("../images/main_menu_pattern.jpg");
+  /* 배경이미지:  */
+}
+header .main-menu .item .item__contents .contents__texture h4 {
+  color: #999;
+  /* 폰트색상: #999 */
+  font-weight: 700;
+  /* 폰트두께: 700 */
+}
+header .main-menu .item .item__contents .contents__texture p {
+  color: #669900;
+  /* 폰트색상: #669900 */
+  margin: 4px 0 14px;
+  /* 외부여백: 위4px 좌우0 아래14px */
 }
