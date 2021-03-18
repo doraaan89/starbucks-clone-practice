@@ -28,7 +28,27 @@ searchInputEl.addEventListener('blur', function() {
 
 const badgeEl = document.querySelector('header .badges');
 
-window.addEventListener('scroll', function() {
-// 브라우저창.(스크롤되면, 메소드 실행)
-  console.log
-});
+window.addEventListener('scroll', _.throttle(function() {
+// 브라우저창.(스크롤되면, lodash쓰로틀링(메소드 실행))
+// _.throttle(함수. 시간)
+  console.log(window.scrollY);
+  if (window.scrollY > 500) {
+  // window.scrollY 값이 500보다 커지면
+    gsap.to(badgeEl, .6, {
+    // gsap.to(요소, 지속시간, 옵션{});
+      opacity: 0,
+      // 투명도: 0
+      display: 'none'
+      // 화면표시: 사용하지 않음 숫자는 따옴표가 필요 없다
+    });
+  } else {
+    gsap.to(badgeEl, .6, {
+    // gsap.to(요소, 지속시간, 옵션{});
+      opacity: 1,
+      // 투명도: 1
+      display: 'block'
+      // 화면표시: 블록요소
+    });
+  }
+}, 300));
+// 300ms에 한번
