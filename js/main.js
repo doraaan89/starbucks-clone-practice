@@ -1,5 +1,5 @@
 const searchEl = document.querySelector('.search');
-// document = HTML에서부터
+// document = HTML 자체
 const searchInputEl = searchEl.querySelector('input');
 // searchEl = .search부터
 
@@ -23,4 +23,12 @@ searchInputEl.addEventListener('blur', function() {
   // searchEl.클래스목록.제거()
   searchInputEl.setAttribute('placeholder', '')
   // .html의 속성을 지정한다(속성, 값)
+});
+
+
+const badgeEl = document.querySelector('header .badges');
+
+window.addEventListener('scroll', function() {
+// 브라우저창.(스크롤되면, 메소드 실행)
+  console.log
 });

@@ -10,6 +10,7 @@ body {
   /* 줄높이: 1.4배 사용하는 글꼴에 따라 달라질수 있다 */
   font-family: 'Nanum Gothic', sans-serif;
   /* 글꼴지정: 나눔고딕, 없을때는 산세리프체 */
+  height: 3000px;
 }
 img {
   display: block;
@@ -35,6 +36,14 @@ header {
   /* 배경색상: #f6f6f6 */
   border-bottom: 1px solid #c8c8c8;
   /* 테두리선-아래: 두께1px 실선 색상#c8c8c8 */
+  position: fixed;
+  /* 위치: 브라우저에 viewport를 기준으로 배치 */
+  /* fixed도 위치상의 부모요소가 될수 있다 */
+  /* fixed, absolute는 가로너비가 최소한으로 줄어들려고 한다 */
+  top: 0;
+  /* 위에서 0 */
+  width: 100%;
+  /* 너비: 부모요소의 100% */
 }
 header > .inner {
 /* header의 자식요소 .inner */
@@ -262,4 +271,24 @@ header .main-menu .item .item__contents .contents__texture p {
   /* 폰트색상: #669900 */
   margin: 4px 0 14px;
   /* 외부여백: 위4px 좌우0 아래14px */
+}
+header .badges {
+  position: absolute;
+  /* 위치: 위치상 부모요소를 기준으로 */
+  top: 132px;
+  /* 위에서 132px */
+  right: 12px
+  /* 오른쪽에서 12px */
+}
+header .badges .badge {
+  border-radius: 10px;
+  /* 모서리: 10px 둥글게 */
+  overflow: hidden;
+  /* 넘치는부분: 숨기기 */
+  margin-bottom: 12px;
+  /* 외부여백-아래: 12px */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, .15);
+  /* 그림자: x축4px y축4px 블러10px 색상(0, 0, 0, 투명도15%*/
+  cursor: pointer;
+  /* 마우스커서: 포인터 */
 }
