@@ -28,6 +28,86 @@ a {
   position: relative;
   /* 위치상의 부모요소가 되기 위한 */
 }
+.btn {
+  width: 130px;
+  /* 너비: 130px */
+  padding: 10px;
+  /* 내부여백: 4방향 10px */
+  border: 2px solid #333;
+  /* 테두리: 두께2px 실선 색상#333 */
+  border-radius: 4px;
+  /* 테두리-모서리: 4px둥글게 */
+  color: #333;
+  /* 글자색상: #333 */
+  font-size: 16px;
+  /* 글자크기: 16px */
+  font-weight: 700;
+  /* 글자두께: 700 */
+  text-align: center;
+  /* 글자정렬: 가운데 */
+  cursor: pointer;
+  /* 마우스커서: 포인터 */
+  box-sizing: border-box;
+  /* 요소크기기준: 테두리까지 포함 */
+  display: block;
+  /* 화면표시: 블록요소 */
+  transition: .4s;
+  /* 전환효과: 0.4초 */
+}
+.btn:hover {
+  background-color: #333;
+  /* 배경-색상: #333 */
+  color: #fff;
+  /* 글자색상: #333 */
+}
+.btn.btn--reverse {
+  background-color: #333;
+  /* 배경-색상: #333 */
+  color: #fff;
+  /* 글자색상: #fff */
+}
+.btn.btn--reverse:hover {
+  background-color: transparent;
+  /* 배경-색상: 투명하게 */
+  color: #333;
+  /* 글자색상: #333 */
+}
+.btn.btn--brown {
+  color: #592B18;
+  /* 글자색상: #592B18 */
+  border-color: #592B18;
+  /* 테두리-색상: #592B18 */
+}
+.btn.btn--brown:hover {
+  color: #fff;
+  /* 글자색상: #fff */
+  background-color: #592B18;
+  /* 배경-색상: #592B18 */
+}
+.btn.btn--gold {
+  color: #D9AA8A;
+  /* 글자색상: #D9AA8A */
+  border-color: #D9AA8A;
+  /* 테두리-색상: #D9AA8A */
+}
+.btn.btn-gold:hover {
+  color: #fff;
+  /* 글자색상: #fff */
+  background-color: #D9AA8A;
+  /* 배경-색상: #D9AA8A */
+}
+.btn.btn--white {
+  color: #fff;
+  /* 글자색상: #fff */
+  border-color: #fff;
+  /* 테두리-색상: #fff */
+}
+.btn.btn--gold:hover {
+  color: #333;
+  /* 글자색상: #333 */
+  background-color: #fff;
+  /* 배경-색상: #fff */
+}
 
 
 /* HEADER */
@@ -44,6 +124,8 @@ header {
   /* 위에서 0 */
   width: 100%;
   /* 너비: 부모요소의 100% */
+  z-index: 9;
+  /* 요소쌓임순서: 클수록 위에 */
 }
 header > .inner {
 /* header의 자식요소 .inner */
@@ -309,23 +391,58 @@ header .badges .badge {
   /* 높이: 646px */
 }
 .visual .title {
-
+  position: absolute;
+  /* 위치: 위치상 부모요소를 기준으로 */
+  top: 88px;
+  /* 위에서 88px */
+  left: -10px;
+  /* 왼쪽에서 -10px */
 }
 .visual .title .btn {
-
+  position: absolute;
+  /* 위치: 위치상 부모요소를 기준으로 */
+  top: 259px;
+  /* 위에서 259px */
+  left: 173px;
+  /* 왼쪽에서 173px */
 }
 .visual .cup1.image {
-  
+  position: absolute;
+  /* 위치: 위치상 부모요소를 기준으로 */
+  bottom: 0;
+  /* 밑에서 0 */
+  right: -47px;
+  /* 오른쪽에서 -47px */
 }
 .visual .cup1.text {
-
+  position: absolute;
+  /* 위치: 위치상 부모요소를 기준으로 */
+  top: 38px;
+  /* 위에서 38px */
+  right: 171px;
+  /* 오른쪽에서 171px */
 }
 .visual .cup2.image {
-  
+  position: absolute;
+  /* 위치: 위치상 부모요소를 기준으로 */
+  bottom: 0;
+  /* 밑에서 0 */
+  right: 162px;
+  /* 오른쪽에서 162px */
 }
 .visual .cup2.text {
-
+  position: absolute;
+  /* 위치: 위치상 부모요소를 기준으로 */
+  top: 321px;
+  /* 위에서 321px */
+  right: 416px;
+  /* 오른쪽에서 416px */
 }
 .visual .spoon {
-
+  position: absolute;
+  /* 위치: 위치상 부모요소를 기준으로 */
+  bottom: 0;
+  /* 밑에서 0 */
+  left: 275px;
+  /* 왼쪽에서 275px */
 }
