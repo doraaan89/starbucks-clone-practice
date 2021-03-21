@@ -52,3 +52,17 @@ window.addEventListener('scroll', _.throttle(function() {
   }
 }, 300));
 // 300ms에 한번
+
+
+
+const fadeEls = document.querySelectorAll('.visual .fade-in');
+fadeEls.forEach(function(fadeEl, index) {
+// fadeEls.갯수만큼 요소 순서대로 실행()
+  gsap.to(fadeEl, 1, {
+  // gsap.to(요소, 지속시간, 옵션{});
+    delay: (index + 1) * .7,
+    // 딜레이: 0.7초 마다,
+    opacity: 1
+    // 투명도: 1
+  });
+});

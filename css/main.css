@@ -446,3 +446,7 @@ header .badges .badge {
   left: 275px;
   /* 왼쪽에서 275px */
 }
+.visual .fade-in {
+  opacity: 0;
+  /* 투명도: 0 */
+}
