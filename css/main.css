@@ -292,3 +292,40 @@ header .badges .badge {
   cursor: pointer;
   /* 마우스커서: 포인터 */
 }
+
+
+/* VISUAL */
+.visual {
+  margin-top: 120px;
+  /* 외부여백-아래: 120px */
+  /* header의 높이값을 입력하는 이유는 position: fixed이기 때문 */
+  background-image: url("../images/visual_bg.jpg");
+  /* 배경-이미지: */
+  background-position: center;
+  /* 배경-위치: 가운데 */
+}
+.visual .inner {
+  height: 646px;
+  /* 높이: 646px */
+}
+.visual .title {
+
+}
+.visual .title .btn {
+
+}
+.visual .cup1.image {
+  
+}
+.visual .cup1.text {
+
+}
+.visual .cup2.image {
+  
+}
+.visual .cup2.text {
+
+}
+.visual .spoon {
+
+}
