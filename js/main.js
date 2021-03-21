@@ -66,3 +66,13 @@ fadeEls.forEach(function(fadeEl, index) {
     // 투명도: 1
   });
 });
+
+new Swiper('.notice-line .swiper-container', {
+// 생성자 Swiper(선택자, 옵션)
+  direction: 'vertical',
+  // 방향: 수직
+  autoplay: true,
+  // 자동재생: 사용
+  loop: true
+  // 반복: 사용
+});

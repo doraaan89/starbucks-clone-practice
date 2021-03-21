@@ -493,8 +493,17 @@ header .badges .badge {
   margin-right: 20px;
 }
 .notice .notice-line .inner .inner__left .swiper-container {
+  height: 62px;
   flex-grow: 1;
   /* flex에서 최대한 늘어나라 별도의 높이 값이 없어도 늘어나서 보인다*/
+}
+.notice .notice-line .inner .inner__left .swiper-slide {
+  height: 62px;
+  display: flex;
+  align-items: center;
+}
+.notice .notice-line .inner .inner__left .swiper-slide a {
+  color: #fff;
 }
 .notice .notice-line .inner .inner__left .notice-line__more {
   width: 62px;
