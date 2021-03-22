@@ -458,83 +458,155 @@ header .badges .badge {
 }
 .notice .notice-line {
   position: relative;
+  /* 위치: 위치상 부모요소가 됨 */
 }
 .notice .notice-line .bg-left {
   position: absolute;
+  /* 위치: 위치상 부모요소를 기준으로 */
   top: 0;
+  /* 위에서 0 */
   left: 0;
+  /* 왼쪽에서 0 */
   width: 50%;
+  /* 너비: 부모요소의 50% */
   height: 100%;
+  /* 높이: 부모요소의 100% */
   background-color: #333;
+  /* 배경-색상: #333 */
 }
 .notice .notice-line .bg-right {
   position: absolute;
+  /* 위치: 위치상 부모요소를 기준으로 */
   top: 0;
+  /* 위에서 0 */
   right: 0;
+  /* 오른쪽에서 0 */
   width: 50%;
+  /* 너비: 부모요소의 50% */
   height: 100%;
+  /* 높이: 부모요소의 100% */
   background-color: #f6f5ef;
+  /* 배경-색상: #f6f5ef */
 }
 .notice .notice-line .inner {
   height: 62px;
+  /* 높이: 62px */
   display: flex;
+  /* 자식요소들을 수평정렬 */
 }
 .notice .notice-line .inner .inner__left {
   width: 60%;
+  /* 너비: 부모요소의 60% */
   height: 100%;
+  /* 노피: 부모요소의 100% */
   background-color: #333;
+  /* 배경-색상: #333 */
   display: flex;
+  /* 화면표시: 플렉서블박스 */
   align-items: center;
+  /* flex에서 수직정렬: 가운데 정렬 */
 }
 .notice .notice-line .inner .inner__left h2 {
   color: #fff;
+  /* 글자색상: #fff */
   font-size: 17px;
+  /* 글자크기: 17px */
   font-weight: 700;
+  /* 글자두께: 700 */
   margin-right: 20px;
+  /* 외부여백-오른쪽: 20px */
 }
 .notice .notice-line .inner .inner__left .swiper-container {
   height: 62px;
+  /* 높이: 62px */
   flex-grow: 1;
   /* flex에서 최대한 늘어나라 별도의 높이 값이 없어도 늘어나서 보인다*/
 }
 .notice .notice-line .inner .inner__left .swiper-slide {
   height: 62px;
+  /* 높이: 62px */
   display: flex;
+  /* 화면표시: 플렉서블박스 */
   align-items: center;
+  /* flex에서 수직정렬: 가운데정렬 */
 }
 .notice .notice-line .inner .inner__left .swiper-slide a {
   color: #fff;
+  /* 글자색상: #fff */
 }
 .notice .notice-line .inner .inner__left .notice-line__more {
   width: 62px;
+  /* 너비: 62px */
   height: 62px;
+  /* 높이: 62px */
   display: flex;
+  /* 화면표시: flexable-box */
   justify-content: center;
+  /* flex에서 수평정렬: 가운데정렬 */
   align-items: center;
+  /* flex에서 수직정렬: 가운데정렬 */
 }
 .notice .notice-line .inner .inner__left .notice-line__more .material-icons {
   color: #fff;
+  /* 글자색상: #fff */
   font-size: 30px;
+  /* 글자크기: 30px */
 }
 .notice .notice-line .inner .inner__right {
   width: 40%;
+  /* 너비: 부모요소의 40% */
   height: 100%;
+  /* 높이: 부모요소의 100% */
   display: flex;
+  /* 화면표시: 부모요소의 100% */
   justify-content: flex-end;
+  /* flex에서 수평정렬: 끝부분(오른쪽) */
   align-items: center;
+  /* flex에서 수직정렬: 가운데정렬 */
 }
 .notice .notice-line .inner .inner__right h2 {
   font-size: 17px;
+  /* 글자크기: 17px */
   font-weight: 700;
+  /* 글자두께: 700 */
 }
 .notice .notice-line .inner .inner__right .toggle-promotion {
   width: 62px;
+  /* 너비: 62px */
   height: 62px;
+  /* 높이: 62px */
   cursor: pointer;
+  /* 커서모양: 포인터 */
   display: flex;
+  /* 화면표시: 플렉서블박스 */
   justify-content: center;
+  /* flex에서 수평정렬: 가운데정렬 */
   align-items: center;
+  /* flex에서 수직정렬: 가운데정렬 */
 }
 .notice .notice-line .inner .inner__right .toggle-promotion .material-icons {
   font-size: 30px;
+  /* 글자크기: 30px */
+}
+.notice .promotion {
+  height: 693px;
+  /* 높이: 693px */
+  background-color: #f6f5ef;
+  /* 배경-색상: #f6f5ef */
+  position: relative;
+  /* 위치: 위치상 부모요소로 만들기 */
+}
+.notice .promotion .swiper-container {
+  width: calc(819px * 3 + 20px);
+  /* 너비: 계산(819px * 3 + 20px) 2477px */
+  height: 553px;
+  /* 높이: 553px */
+  background-color: orange;
+  position: absolute;
+  /* 위치: 위치상 부모요소를 기준으로 */
+  top: 40px;
+  /*  위에서 40px */
+  left: 50%;
+  margin-left: calc((819px * 3 + 20px) / -2);
+  /* 확대해도 요소가 가운데 존재하게끔 할수 있다 left, right 어느쪽이든 상관없음*/
 }
