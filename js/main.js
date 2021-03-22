@@ -114,11 +114,16 @@ const promotionToggleBtn = document.querySelector('.toggle-promotion');
 let isHidePromotion = false;
 
 promotionToggleBtn.addEventListener('click', function() {
+// .toggle-promotion.클릭하면 함수실행
   isHidePromotion = !isHidePromotion
   // isHidePromotion이 true이면 false로 할당,false이면 true로 할당 !
   if(isHidePromotion) {
+  // isHidePromotion이 true이면
     promotionEl.classList.add('hide');
+    // .promotion의.클래스목록에.추가
   } else {
+  // 아니라면
     promotionEl.classList.remove('hide');
+        // .promotion의.클래스목록에.제거
   }
 });
