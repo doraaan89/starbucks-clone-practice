@@ -630,3 +630,79 @@ header .badges .badge {
   margin: auto;
   /* position의 정 가운데 정렬 너비가 꼭 있어야 한다 */
 }
+.notice .promotion .swiper-pagination {
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  /* swiper라이브러리 안에 이미 position 값이 정해져 있어서 생략 */
+}
+.notice .promotion .swiper-pagination .swiper-pagination-bullet {
+/* swiper라이브러리에서 추가하는 클래스에 대한 */
+  background-color: transparent;
+  /* 배경-색상: 투명 */
+  background-image: url('../images/promotion_slide_pager.png');
+  /* 배경-이미지: */
+  width: 12px;
+  /* 너비: 12px */
+  height: 12px;
+  /* 높이: 12px */
+  margin-right: 6px;
+  /* 외부여백-오른쪽: 6px */
+  outline: none;
+  /* 글자테두리: 사용하지않음 */
+}
+.notice .promotion .swiper-pagination .swiper-pagination-bullet:last-child {
+  margin-right: 0;
+  /* 외부여백: 0 */
+}
+.notice .promotion .swiper-pagination .swiper-pagination-bullet-active {
+  background-image: url('../images/promotion_slide_pager_on.png');
+  /* 배경-이미지:  */
+}
+.notice .promotion .swiper-prev,
+.notice .promotion .swiper-next {
+/* 다중선택자 , */
+  width: 42px;
+  /* 너비: 42px */
+  height: 42px;
+  /* 높이: 42px */
+  border: 2px solid #333;
+  /* 테두리: 두께2px 실선 색상#333 */
+  border-radius: 50%;
+  /* 모서리: 50%둥글게(원) */
+  position: absolute;
+  /* 위치: 위치상의 부모요소 기준으로 */
+  top: 300px;
+  /* 위에서 300px */
+  z-index: 1;
+  /* 요소쌓임순서 */
+  cursor: pointer;
+  /* 커서모양: 포인터 */
+  outline: none;
+  /* 글자테두리: 없음 */
+  display: flex;
+  /* 화면표시: 플렉서블박스 */
+  justify-content: center;
+  /* flex에서 수평정렬: 가운데 정렬 */
+  align-items: center;
+  /* flex에서 수직정렬: 가운데 정렬 */
+  transition: .4s;
+  /* 전환효과: 0.4초 */
+}
+.notice .promotion .swiper-prev {
+  left: 50%;
+  /* 왼쪽에서 50% */
+  margin-left: -480px;
+  /* 외부여백-왼쪽: -480px */
+}
+.notice .promotion .swiper-next {
+  right: 50%;
+  /* 오른쪽에서 50% */
+  margin-right: -480px;
+  /* 외부여백-오른쪽 -480px */
+}
+.notice .promotion .swiper-prev:hover,
+.notice .promotion .swiper-next:hover {
+  background-color: #333;
+  color: #fff;
+}
