@@ -107,6 +107,42 @@ a {
   background-color: #fff;
   /* 배경-색상: #fff */
 }
+.back-to-position {
+  opacity: 0;
+  /* 투명도 0; */
+  transition: 1s;
+  /* 전환효과: 1초 */
+}
+.back-to-position.to-right {
+  transform: translateX(-150px);
+  /* 변환효과: x축으로이동 -150px*/
+}
+.back-to-position.to-left {
+  transform: translateX(150px);
+  /* 변환효과: x축으로이동 150px */
+}
+.show .back-to-position {
+  opacity: 1;
+  /* 투명도: 1 */
+  transform: translateX(0);
+  /* 변환효과: x축이동(0) */
+}
+.show .back-to-position.delay-0 {
+  transition-delay: 0s;
+  /* 전환효과-지연시간: 0s */
+}
+.show .back-to-position.delay-1 {
+  transition-delay: .3s;
+  /* 전환효과-지연시간: 0s */
+}
+.show .back-to-position.delay-2 {
+  transition-delay: .6s;
+  /* 전환효과-지연시간: 0s */
+}
+.show .back-to-position.delay-3 {
+  transition-delay: .9s;
+  /* 전환효과-지연시간: 0s */
+}
 
 
 /* HEADER */

@@ -162,8 +162,9 @@ spyEls.forEach(function(spyEl) {
       triggerElement: spyEl,
       // 보여짐 여부를 감시할 요소를 지정
       triggerHook: .8
-      // viewport
+      // viewport의 어느부분을 지나갈때 실행할것인지 지정 top:0 bottom:1
     })
-    .setClassToggle()
-    .addTo();
+    .setClassToggle(spyEl, 'show')
+    // (클래스를 추가할 요소, 추가할 클래스)
+    .addTo(new ScrollMagic.Controller());
 });
