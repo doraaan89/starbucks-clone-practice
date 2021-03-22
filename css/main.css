@@ -10,7 +10,6 @@ body {
   /* 줄높이: 1.4배 사용하는 글꼴에 따라 달라질수 있다 */
   font-family: 'Nanum Gothic', sans-serif;
   /* 글꼴지정: 나눔고딕, 없을때는 산세리프체 */
-  height: 3000px;
 }
 img {
   display: block;
@@ -841,26 +840,146 @@ header .badges .badge {
 }
 #player {
   width: 100%;
+  /* 너비: 부모요소의 100% */
   height: 100%;
+  /* 높이: 부모요소의 100% */
   position: absolute;
+  /* 위치: 위치상 부모요소를 기준으로 배치 */
   top: 0;
+  /* 위에서0 */
   left: 0;
+  /* 왼쪽에서 0 */
 }
 .youtube .inner {
   height: 700px;
+  /* 너비: 700px */
 }
 .youtube .floating1 {
   position: absolute;
+  /* 위치: 위치상 부모요소를 기준으로 배치 */
   top: 50px;
+  /* 위에서50px */
   left: 0;
+  /* 왼쪽에서0 */
 }
 .youtube .floating2 {
   position: absolute;
+  /* 위치: 위치상 부모요소를 기준으로 배치 */
   top: 350px;
+  /* 위에서350px */
   left: 150px;
+  /* 왼쪽에서150px */
 }
-.youtube .floating3 {
+
+
+
+/* SEASON PRODUCT */
+.season-product {
+  background-image: url("../images/season_product_bg.jpg");
+  /* 배경-이미지: 주소() */
+}
+.season-product .inner {
+  height: 400px;
+  /* 높이: 400px */
+}
+.season-product .floating3 {
   position: absolute;
-  bottom: -200px;
+  /* 위치: 위치상 부모요소를 기준으로 배치 */
+  top: -200px;
+  /* 위에서-200px */
   right: 0;
+  /* 오른쪽에서0 */
+}
+.season-product .text-group {
+  position: absolute;
+  /* 위치: 위치상 부모요소를 기준으로 배치 */
+  top: 110px;
+  /* 위에서110px */
+  right: 100px;
+  /* 오른쪽에서100px */
+}
+.season-product .text-group .title {
+  margin-bottom: 10px;
+  /* 외부여백-아래: 10px */
+}
+.season-product .text-group .description {
+  margin-bottom: 15px;
+  /* 외부여백-아래: 15px */
+}
+.season-product .text-group .more {
+
+}
+
+
+/* RESERVE COFFEE */
+.reserve-coffee {
+  background-image: url("../images/reserve_bg.jpg");
+  /* 배경-이미지: 주소() */
+}
+.reserve-coffee .inner {
+  height: 400px;
+  /* 높이: 400px */
+}
+.reserve-coffee .reserve-logo {
+  position: absolute;
+  /* 위치: 위치상 부모요소를 기준으로 배치 */
+  top: 110px;
+  /* 위에서110px */
+  left: 0;
+  /* 왼쪽에서0 */
+}
+.reserve-coffee .text-group {
+  position: absolute;
+  /* 위치: 위치상 부모요소를 기준으로 배치 */
+  top: 124px;
+  /* 위에서124px */
+  left: 208px;
+  /* 왼쪽에서208px */
+}
+.reserve-coffee .product {
+  position: absolute;
+  /* 위치: 위치상 부모요소를 기준으로 배치 */
+  top: 0;
+  /* 위에서0 */
+  right: 0;
+  /* 오른쪽에서0 */
+}
+
+
+/* PICK YOUR FAVORITE */
+.pick-your-favorite {
+  background-image: url("../images/favorite_bg.jpg");
+  /* 배경-이미지: 주소() */
+  background-repeat: no-repeat;
+  /* 배경-빈복: 반복하지않음 */
+  background-position: center;
+  /* 배경-위치: 가운데 */
+  background-attachment: fixed;
+  /* 배경-스크롤: 고정 */
+  background-size: cover;
+  /* 배경-크기: 비율유지, 요소의 더 넓은 너비에 맞춘다 */
+}
+.pick-your-favorite .inner {
+  padding: 110px 0;
+  /* 내부여백: 위아래110px 좌우0 */
+}
+.pick-your-favorite .text-group {
+  margin-left: 100px;
+  /* 외부여백-왼쪽: 100px */
+  width: 362px;
+  /* 너비: 362px */
+  display: flex;
+  /* 화면표시: flex */
+  flex-wrap: wrap;
+  /* flex줄바꿈: 사용 */
+  justify-content: flex-end;
+  /* flex 수평정렬: 끝부분(오른쪽) */
+}
+.pick-your-favorite .text-group .title {
+  margin-bottom: 40px;
+  /* 외부여백-아래: 40px */
+}
+.pick-your-favorite .text-group .description {
+  margin-bottom: 40px;
+  /* 외부여백-아래: 40px */
 }
