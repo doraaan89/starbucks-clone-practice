@@ -983,3 +983,74 @@ header .badges .badge {
   margin-bottom: 40px;
   /* 외부여백-아래: 40px */
 }
+
+
+/* RESERVE STORE */
+.reserve-store {
+  background-image: url("../images/reserve_store_bg.jpg");
+  /* 배경-이미지: 주소() */
+  background-repeat: no-repeat;
+  /* 배경-빈복: 반복하지않음 */
+  background-position: center;
+  /* 배경-위치: 가운데 */
+  background-attachment: fixed;
+  /* 배경-스크롤: 고정 */
+  background-size: cover;
+  /* 배경-크기: 비율유지, 요소의 더 넓은 너비에 맞춘다 */
+}
+.reserve-store .inner {
+  height: 600px;
+  /* 높이: 600px */
+  display: flex;
+  /* 화면표시: flex */
+  justify-content: center;
+  /* flex 수평정렬: 가운데정렬 */
+  align-items: center;
+  /* flex 수직정렬: 가운데정렬 */
+}
+.reserve-store .medal {
+  width: 334px;
+  /* 너비: 334px */
+  height: 334px;
+  /* 높이: 334px */
+  perspective: 600px;
+  /* 원근감: 600px */
+}
+.reserve-store .medal .front,
+.reserve-store .medal .back {
+  width: 334px;
+  /* 너비: 334px */
+  height: 334px;
+  /* 높이: 334px */
+  position: absolute;
+  /* 위치: 위치상 부모요소 기준으로 배치 */
+  backface-visibility: hidden;
+  /* 뒷면숨김: 숨김 */
+  transition: 1s;
+  /* 전환효과: 1초 */
+}
+.reserve-store .medal .front {
+  transform: rotateY(0deg);
+  /* 변환효과: y축회전 */
+}
+.reserve-store .medal:hover .front {
+  transform: rotateY(180deg);
+}
+.reserve-store .medal .back {
+  transform: rotateY(-180deg);
+}
+.reserve-store .medal:hover .back {
+  transform: rotateY(0deg);
+}
+.reserve-store .medal .back .btn {
+  position: absolute;
+  /* 위치: 위치상 부모요소 기준으로 배치 */
+  top: 240px;
+  /* 위에서240px */
+  left: 0;
+  /* 왼쪽에서0 */
+  right: 0;
+  /* 오른쪽에서0 */
+  margin: auto;
+  /* 외부여백: 정가운데 정렬방식(너비가 존재해야함) */
+}
