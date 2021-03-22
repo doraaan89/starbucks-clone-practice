@@ -106,6 +106,19 @@ new Swiper('.promotion .swiper-container', {
     // 다음버튼: 선택자
   }
 });
+new Swiper('.awards .swiper-container', {
+  direction: 'horizontal',
+  autoplay: true,
+  loop: true,
+  spaceBetween: 30,
+  slidesPerView: 5,
+  navigation: {
+    prevEl: '.awards .swiper-prev',
+    // 이전버튼: 선택자
+    nextEl: '.awards .swiper-next'
+    // 다음버튼: 선택자
+  }
+});
 
 
 
@@ -124,7 +137,7 @@ promotionToggleBtn.addEventListener('click', function() {
   } else {
   // 아니라면
     promotionEl.classList.remove('hide');
-        // .promotion의.클래스목록에.제거
+    // .promotion의.클래스목록에.제거
   }
 });
 
