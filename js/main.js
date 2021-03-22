@@ -181,3 +181,8 @@ spyEls.forEach(function(spyEl) {
     // (클래스를 추가할 요소, 추가할 클래스)
     .addTo(new ScrollMagic.Controller());
 });
+
+
+const thisYear = document.querySelector('.this-year');
+thisYear.textContent = new Date().getFullYear();
+// .글자삽입 = 생성자 Date().

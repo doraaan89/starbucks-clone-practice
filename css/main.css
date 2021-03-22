@@ -1095,83 +1095,240 @@ header .badges .badge {
 /* FIND THE STORE */
 .find-store {
   background-image: url("../images/find_store_bg.jpg");
+  /* 배경-이미지: */
 }
 .find-store .inner {
   height: 400px;
+  /* 높이: 400px */
 }
 .find-store .texture1 {
   position: absolute;
+  /* 위치: 위치상 부모요소 기준으로 배치 */
   top: 0;
+  /* 위에서0 */
   left: 400px;
+  /* 왼쪽에서400px */
 }
 .find-store .texture2 {
   position: absolute;
+  /* 위치: 위치상 부모요소 기준으루 배치 */
   bottom: 0;
+  /* 아래서0 */
   right: 0;
+  /* 오른쪽에서0 */
 }
 .find-store .picture {
   border-radius: 50%;
+  /* 모서리: 50%둥글게(원) */
   box-shadow: 2px 2px 8px rgba(0, 0, 0, .5);
+  /* 요소-그림자: x축2px y축2px 블러8px 색상0, 0, 0, 투명도50% */
   position: absolute;
+  /* 위치: 위치상 부모요소 기준으로 배치 */
 }
 .find-store .picture1 {
   top: -60px;
+  /* 위에서 -60px */
   left: 0;
+  /* 왼쪽에서0 */
 }
 .find-store .picture2 {
   top: 150px;
+  /* 위에서150px */
   left: 250px;
+  /* 왼쪽에서250px */
 }
 .find-store .text-group {
   position: absolute;
+  /* 위치: 위치장 부모요소 기준으로 배치 */
   top: 120px;
+  /* 위에서120px */
   left: 550px;
+  /* 왼쪽에서550px */
 }
 .find-store .text-group .title {
   margin-bottom: 20px;
+  /* 외부여백-아래: 20px */
 }
 .find-store .text-group .description {
   margin-bottom: 20px;
+  /* 외부여백-아래: 20px */
 }
 
 
 /* AWARDS */
 .awards {
   background-color: #272727;
+  /* 배경-색상: #272727 */
 }
 .awards .inner {
   padding: 40px 0;
+  /* 내부여백: 위아래40px 좌우0 */
 }
 .awards .swiper-container {
   width: 100%;
+  /* 너비: 부모요소100% */
   height: 40px;
+  /* 높이: 40px */
 }
 .awards .swiper-prev,
 .awards .swiper-next {
   width: 42px;
+  /* 너비: 42px */
   height: 42px;
+  /* 높이: 42px */
   border: 2px solid #fff;
+  /* 테두리: 두꼐2px 실선 색상#fff */
   border-radius: 50%;
+  /* 모서리: 50%둥글게(원) */
   outline: none;
+  /* 글자테두리: 사용하지않음 */
   color: #fff;
+  /* 글자색상: #fff */
   opacity: .3;
+  /* 투명도: 30% */
   cursor: pointer;
+  /* 커서모양: 포인터 */
   display: flex;
+  /* 화면표시: flex */
   justify-content: center;
+  /* flex수평정렬: 가운데정렬 */
   align-items: center;
+  /* flex수직정렬: 가운데정렬 */
   position: absolute;
+  /* 위치: 위치상 부모요소 기준으로 배치 */
   top: 0;
+  /* 위에서0 */
   bottom: 0;
+  /* 아래서0 */
   margin: auto;
+  /* 외부여백: 자동(가운데정렬) */
 }
 .awards .swiper-prev {
   left: -100px;
+  /* 왼쪽에서-100px */
 }
 .awards .swiper-next {
   right: -100px;
+  /* 오른쪽에서-100px */
 }
 .awards .swiper-prev:hover,
 .awards .swiper-next:hover {
   background-color: #fff;
+  /* 배경-색상: #fff */
   color: #333;
+  /* 글자색깔: #333 */
+}
+
+
+/* FOOTER */
+footer {
+  background-color: #272727;
+  /* 배경-색상: #272727 */
+  border-top: 1px solid #333;
+  /* 테두리-위: 두께1px 실선 색상#333 */
+}
+footer .inner {
+  padding: 40px 0 60px 0;
+  /* 내부여백: 위40px 우0 아래60px 좌0 */
+}
+footer .menu {
+  display: flex;
+  /* 화면표시: flex */
+  justify-content: center;
+  /* flex수평정렬: 가운데정렬 */
+}
+footer .menu li {
+  position: relative;
+  /* 위치: 위치상 부모요소로 만들기 */
+}
+footer .menu li::before {
+  content: "";
+  /* 내용:  */
+  width: 3px;
+  /* 너비: 3px */
+  height: 3px;
+  /* 높이: 3px */
+  background-color: #555;
+  /* 배경-색상: #555 */
+  position: absolute;
+  /* 위치: 위치상의 부모요소 기준으로 배치 */
+  top: 0;
+  /* 위에서0 */
+  bottom: 0;
+  /* 아래서0 */
+  right: -1px;
+  /* 오른쪽에서-1px */
+  margin: auto;
+  /* 외부여백: 자동 */
+}
+footer .menu li:last-child::before {
+  display: none;
+  /* 화면표시: 보이지 않음 */
+}
+footer .menu li a {
+  color: #ccc;
+  /* 글자색: #ccc */
+  font-size: 12px;
+  /* 글자크기: 12px */
+  font-weight: 700;
+  /* 글자두께: 700 */
+  padding: 15px;
+  /* 내부여백: 15px */
+  display: block;
+  /* 화면표시: 블록요소 */
+}
+footer .menu li a.green {
+  color: #669900;
+  /* 글자색: #669900 */
+}
+footer .btn-group {
+  margin-top: 20px;
+  /* 외부여백-위: 20px */
+  display: flex;
+  /* 화면표시: flex */
+  justify-content: center;
+  /* flex수평정렬: center */
+}
+footer .btn-group .btn {
+  font-size: 12px;
+  /* 글자크기: 12px */
+  margin-right: 10px;
+  /* 외부여백: 10px */
+}
+footer .btn-group .btn:last-child {
+  margin-right: 0;
+  /* 외부여백-우: 0 */
+}
+footer .info {
+  margin-top: 30px;
+  /* 외부여백-위: 30px */
+  text-align: center;
+  /* 글자정렬: 가운데정렬 */
+}
+footer .info span {
+  margin-right: 20px;
+  /* 외부여백-우: 20px */
+  color: #999;
+  /* 글자색: #999 */
+  font-size: 12px;
+  /* 글자크기: 12px */
+}
+footer .info span:last-child {
+  margin-right: 0;
+  /* 외부여백-우: 0 */
+}
+footer .copyright {
+  color: #999;
+  /* 글자색: #999 */
+  font-size: 12px;
+  /* 글자크기: 12px */
+  text-align: center;
+  /* 글자정렬: 가운데정렬 */
+  margin-top: 12px;
+  /* 외부여백-위: 12px */
+}
+footer .logo {
+  margin: 30px auto 0;
+  /* img요소가 display:block; + margin: 0 auto; 인 경우,
+  width 속성이 없어도 가운데 정렬이 가능하다 */
 }
