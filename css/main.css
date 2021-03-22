@@ -595,6 +595,14 @@ header .badges .badge {
   /* 배경-색상: #f6f5ef */
   position: relative;
   /* 위치: 위치상 부모요소로 만들기 */
+  transition: height .4s;
+  /* 전환효과: 높이 0.4초 동안 */
+  overflow: hidden;
+  /* 요소넘침: 숨김 */
+}
+.notice .promotion.hide {
+  height: 0;
+  /* 높이: 0 */
 }
 .notice .promotion .swiper-container {
   width: calc(819px * 3 + 20px);
@@ -704,5 +712,7 @@ header .badges .badge {
 .notice .promotion .swiper-prev:hover,
 .notice .promotion .swiper-next:hover {
   background-color: #333;
+  /* 배경-색상: #333 */
   color: #fff;
+  /* 글자색상: #fff */
 }
