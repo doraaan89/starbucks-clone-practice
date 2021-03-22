@@ -76,3 +76,33 @@ new Swiper('.notice-line .swiper-container', {
   loop: true
   // 반복: 사용
 });
+
+new Swiper('.promotion .swiper-container', {
+  direction: 'horizontal',
+  // 방향: 수평(기본값이므로 추가하지 않아도 된다)
+  slidesPerView: 3,
+  // 한번에 보여줄 슬라이드 개수: 3
+  spaceBetween: 10,
+  // 슬라이드 사이의 여백: 10(px)
+  centeredSlides: true,
+  // 1번 슬라이드가 가운데: 사용
+  loop: true,
+  // 반복: 사용
+  autoplay: {
+  // 자동재생: {옵션}
+    delay: 5000
+    // 딜레이: 5000(ms) 기본값은 3000
+  },
+  pagination: {
+    el: '.promotion .swiper-pagination',
+    // 페이지 번호 요소 선택자
+    clickable: true,
+    // 사용자의 페이지 번호 요소 제어
+  },
+  navigation: {
+    prevEl: '.promotion .swiper-prev',
+    // 이전버튼: 선택자
+    nextEl: '.promotion .swiper-next'
+    // 다음버튼: 선택자
+  }
+});

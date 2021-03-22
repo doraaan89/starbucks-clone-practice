@@ -601,7 +601,6 @@ header .badges .badge {
   /* 너비: 계산(819px * 3 + 20px) 2477px */
   height: 553px;
   /* 높이: 553px */
-  background-color: orange;
   position: absolute;
   /* 위치: 위치상 부모요소를 기준으로 */
   top: 40px;
@@ -609,4 +608,25 @@ header .badges .badge {
   left: 50%;
   margin-left: calc((819px * 3 + 20px) / -2);
   /* 확대해도 요소가 가운데 존재하게끔 할수 있다 left, right 어느쪽이든 상관없음*/
+}
+.notice .promotion .swiper-slide {
+  opacity: .5;
+  /* 투명도: 50% */
+  transition: opacity 1s;
+  position: relative;
+  /* 위치 */
+}
+.notice .promotion .swiper-slide-active {
+/* swiper라이브러리에서 추가하는 클래스에 대한 */
+  opacity: 1;
+  /* 투명도: 100% */
+}
+.notice .promotion .swiper-slide .btn {
+  position: absolute;
+  /* 위치: 위치상의 부모요소를 기준으로 */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  /* position의 정 가운데 정렬 너비가 꼭 있어야 한다 */
 }
