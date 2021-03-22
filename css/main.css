@@ -721,45 +721,121 @@ header .badges .badge {
 /* REWARD */
 .rewards {
   position: relative;
+  /* 위치: 위치상 부모요소로 만들기 */
 }
 .rewards .bg-left {
   width: 50%;
+  /* 너비: 부모요소의 50% */
   height: 100%;
+  /* 높이: 부모요소의 100% */
   background-color: #272727;
+  /* 배경-색상: #272727 */
   position: absolute;
+  /* 위치: 위치상의 부모요소 기준으로 배치 */
   top: 0;
+  /* 위에서0 */
   left: 0;
+  /* 왼쪽에서0 */
 }
 .rewards .bg-right {
   width: 50%;
+  /* 너비: 부모요소의 50% */
   height: 100%;
+  /* 높이: 부모요소의 100% */
   background-color: #d5c798;
+  /* 배경-색상: #d5c798 */
   position: absolute;
+  /* 위치: 위치상 부모요소를 기준으로 배치 */
   top: 0;
+  /* 위에서0 */
   right: 0;
+  /* 오른쪽에서0 */
 }
 .rewards .inner {
   background-image: url("../images/rewards.jpg");
+  /* 배경-이미지: 주소() */
   height: 241px;
+  /* 높이: 241px */
 }
 .rewards .btn-group {
   position: absolute;
+  /* 위치: 위치상 부모요소를 기준으로 배치 */
   bottom: 24px;
+  /* 아래에서 24px */
   right: 0;
+  /* 오른쪽에서0 */
   width: 250px;
+  /* 너비: 250px */
   display: flex;
+  /* 화면표시: flex */
   flex-wrap: wrap;
   /* flex에서 줄바꿈: 위에서 아래로 여러줄 묶음 */
   /* 가로너비보다 내용이 커지면 줄바꿈 하겠다 */
 }
 .rewards .btn-group .btn.sign-up {
   margin-right: 10px;
+  /* 외부여백-오른쪽: 10px */
 }
 .rewards .btn-group .btn.sign-in {
   width: 110px;
+  /* 너비: 110px */
 }
 .rewards .btn-group .btn.gift {
   margin-top: 10px;
+  /* 외부여백-위: 10px */
   flex-grow: 1;
   /* flex증가너비비율: 1(기본값은0) */
+}
+
+
+/* YOUTUBE VIDEO */
+.youtube {
+  position: relative;
+  /* 위치: 위치상 부모요소로 만들기 */
+  height: 700px;
+  /* 높이: 700px */
+  background-color: #333;
+  /* 배경-색상: #333 */
+  overflow: hidden;
+  /* 요소가 넘칠때: 숨김 */
+}
+.youtube .youtube__area {
+  width: 1920px;
+  /* 너비" 1920px */
+  position: absolute;
+  /* 위치: 위치상 부모요소를 기준으로 배치 */
+  left: 50%;
+  /* 왼쪽에서50% */
+  margin-left: calc(1920px / -2);
+  /* 외부여백-왼쪽: 계산(1920px / -2) -960px */
+  top: 50%;
+  /* 위에서 50% */
+  margin-top: calc(1920px * 9 / 16 / -2);
+  /* 외부여백-위: 계산(1920px * 9 / 16 / -2) -540px */
+}
+.youtube .youtube__area::before {
+  content: "";
+  /* 내용: 없음 */
+  display: block;
+  /* 가상요소선택자는 기본적으로 inline요소이기 때문에 block으로 지정 */
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%;
+  /* 내부여백-위 를 이용해 16대9로 만들어줄때 */
+}
+.youtube .youtube__cover {
+  background-image: url("../images/video_cover_pattern.png");
+  /* 배경-이미지: 주소() */
+  background-color: rgba(0, 0, 0, .3);
+  /* 배경-색상: 색상0, 0, 0, 투명도30% */
+  position: absolute;
+  /* 위치: 위치상 부모요소를 기준으로 배치 */
+  top: 0;
+  /* 위에서0 */
+  left: 0;
+  /* 왼쪽에서0 */
+  width: 100%;
+  /* 너비: 부모요소의 100% */
+  height: 100%;
+  /* 높이: 부모요소의 100% */
 }
